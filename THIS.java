@@ -1,13 +1,17 @@
 package OOPS;
 
 public class THIS {
+    String name;
     THIS(){
-       this("ABCD");
+        name="hello";
     }
-    THIS(String str){
-        System.out.println("String is "+str);
+    THIS return_object(){
+        return this;
+    }
+    public void display(){
+        System.out.println(name);
     }
     public static void main(String[] args){
-        new THIS();
+        (new THIS()).return_object().display();
     }
 }
