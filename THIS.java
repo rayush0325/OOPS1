@@ -1,21 +1,13 @@
 package OOPS;
 
 public class THIS {
-    String name;
-
-    public String get_name(){
-        return name;
+    THIS(){
+       this("ABCD");
     }
-    public void set_Name(String str){
-        name=str;
-    }
-    public void display(){
-        System.out.println(name);
+    THIS(String str){
+        System.out.println("String is "+str);
     }
     public static void main(String[] args){
-        THIS obj=new THIS();
-        obj.set_Name("ABC");
-        System.out.println(obj.get_name());
-        obj.display();
+        new THIS();
     }
 }
