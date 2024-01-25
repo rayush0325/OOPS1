@@ -3,15 +3,14 @@ package OOPS;
 public class THIS {
     String name;
     THIS(){
-        name="hello";
+        name="hello1";
+        display(this);
     }
-    THIS return_object(){
-        return this;
+    public void display(THIS obj){
+        System.out.println(obj.name);
     }
-    public void display(){
-        System.out.println(name);
-    }
+
     public static void main(String[] args){
-        (new THIS()).return_object().display();
+        new THIS();
     }
 }
