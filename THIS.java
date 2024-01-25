@@ -3,8 +3,8 @@ package OOPS;
 public class THIS {
     String name;
     THIS(){
-        name="hello1";
-        display(this);
+        name="hello2";
+        this.display(this);
     }
     public void display(THIS obj){
         System.out.println(obj.name);
