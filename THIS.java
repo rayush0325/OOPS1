@@ -16,6 +16,6 @@ public class THIS {
         THIS obj=new THIS();
         obj.set_Name("ABC");
         System.out.println(obj.get_name());
-        
+        obj.display();
     }
 }
