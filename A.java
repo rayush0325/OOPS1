@@ -1,7 +1,7 @@
 package pack1;
 
 public class A {
-     void mA(){
+    protected void mA(){
         System.out.println("mA A pack1");
     }
     public static void main(String[] args){
@@ -11,13 +11,13 @@ public class A {
 
     }
 }
-class A1 {
+class A1 extends A{
 
     A1(){
         A obj=new A();
         obj.mA();
-        //now the method mA  is accessible in this class since it is declared as default
-        //now the classA1 is not the subclass of A but still methode mA is accessible in A1
+        //now the method mA  is accessible in this class since it is declared as protected
+        
     }
 
 }
