@@ -13,6 +13,7 @@ public class Static {
         x=1;
         Static obj=new Static();
         obj.x=2;
+        System.out.println("Static.x :"+Static.x);//static variable are accessible with class name
         System.out.println("x :"+x);//accessing without object
         System.out.println("obj.x :"+obj.x);//accessing with object
         Static obj1 =new Static();
