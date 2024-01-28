@@ -1,12 +1,20 @@
 public class Constructor {
-    static int count=0;
-    Constructor(){
-        count+=1;
-        System.out.println("calling constructor "+count);
+    //program to demonstrate copy constructor
+    static String name;
+    //parameterised constructor
+    Constructor(String str){
+        this.name=str;
+    }
+    //copy constructor
+    Constructor(Constructor obj){
+        this.name=obj.name+"DEF";
     }
     public static void main(String[] args){
-        new Constructor();// constructor can only be called at the time of object creation and only once
-        new Constructor();//to call the constructor again we have to create another object
-        new Constructor();
+        System.out.println("first object");
+        Constructor obj1=new Constructor("ABC");//calling parameterised constructor ,passing string value as parameter to initialise attributes of current object
+        System.out.println("obj1.name :"+obj1.name);
+        System.out.println("second object");
+        Constructor obj2=new Constructor(obj1);//calling copy constructor, passing previous object as parameter to initialise attributes of current object
+        System.out.println("obj2.name :"+obj2.name);
     }
 }
