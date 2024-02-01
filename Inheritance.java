@@ -1,9 +1,11 @@
+import java.net.SocketOption;
+
 public class Inheritance {
     public static void main(String[] args){
         Parent obj1=new Parent();
-        obj1.m1();//when referenced with the object of super class initial method is being called up
-        
-        Child1 obj=new Child1("RED","BLUE");
+        obj1.m1();//when referenced with the object of super class initial method(prior to overriding) is being called up
+
+        Child1 obj=new Child1("RED","BLUE");//on calling parent constructor, child constructor get called up implicitly
         obj.m1();//using method of super class in subclass
         obj.m2();
         obj.m3();
@@ -27,6 +29,9 @@ class Parent{
 class Child1 extends Parent{
     public String b;
     Child1(String str1, String str2){
+        super();
+        System.out.println("child constructor");
+
         a=str1;//using variable of super class without declaring it in subclass
         b=str2;
     }
